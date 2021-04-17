@@ -46,3 +46,27 @@ dep scaffold development
 ```sh
 gulp
 ```
+
+## install woof
+```
+dep installWoof development
+```
+
+
+## install woow
+```
+dep installWoow development
+```
+
+
+## install woow theme
+```
+dep installWoowTheme development
+```
+
+___
+
+## create vuejs app
+```
+dep createVueApplication development
+```
