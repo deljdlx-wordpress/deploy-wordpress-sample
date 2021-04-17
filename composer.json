@@ -1,0 +1,15 @@
+{
+    "require-dev": {
+        "deployer/recipes": "^6.2"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Deljdlx\\Deploy\\": "./vendor/Deljdlx/Deploy/class",
+            "Deljdlx\\Deploy\\Wordpress\\": "./vendor/Deljdlx/DeployWordpress/class",
+            "Deljdlx\\Deploy\\Environment\\": "./DeployEnvironment/class"
+        }
+    }
+}
