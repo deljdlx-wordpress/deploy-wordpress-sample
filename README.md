@@ -12,6 +12,8 @@ php composer-setup.php --quiet
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
+
+
 ### PhpDeployer
 
 https://deployer.org/
@@ -22,14 +24,30 @@ sudo mv deployer.phar /usr/local/bin/dep
 sudo chmod +x /usr/local/bin/dep
 ```
 
+### wp-cli
+
+```sh
+cd /tmp
+
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
+```
+
+### vue-cli
+
+```sh
+npm install -g @vue/cli
+npm install -g @vue/cli-service-global
+```
+
+
+
 ### Gulp
 
 ```sh
 npm install --global gulp-cli
 ```
-
-
-
 
 ## Quick start
 
@@ -49,15 +67,14 @@ gulp
 
 ## install woof
 ```
+dep installRequirements development
 dep installWoof development
 ```
-
 
 ## install woow
 ```
 dep installWoow development
 ```
-
 
 ## install woow theme
 ```
