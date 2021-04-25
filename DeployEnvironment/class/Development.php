@@ -15,10 +15,13 @@ class Development extends Environment
     public function initialize()
     {
         parent::initialize();
+
+        $currentPath = basename(getcwd());
+
+
         $this
             ->hostname('localhost')
-
-            ->set('site_document_root', 'http://localhost/deploy-wordpress-sample/')
+            ->set('site_document_root', 'http://localhost/' . $currentPath . '/')
 
             ->set('application', 'WP Workbench')
             // Project repository

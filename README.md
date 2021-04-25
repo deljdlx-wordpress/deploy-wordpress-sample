@@ -1,7 +1,7 @@
 # Woow Wordpress installation
 
 
-## Requirements
+## Wordpress Requirements
 
 ### Composer
 
@@ -11,8 +11,6 @@ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php --quiet
 sudo mv composer.phar /usr/local/bin/composer
 ```
-
-
 
 ### PhpDeployer
 
@@ -34,20 +32,6 @@ chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
 ```
 
-### vue-cli
-
-```sh
-npm install -g @vue/cli
-npm install -g @vue/cli-service-global
-```
-
-
-
-### Gulp
-
-```sh
-npm install --global gulp-cli
-```
 
 ## Quick start
 
@@ -59,11 +43,23 @@ dep scaffold development
 ```
 
 
-## Starting hot reload
+## Woof Requirements
+
+### vue-cli
 
 ```sh
-gulp
+npm install -g @vue/cli
+npm install -g @vue/cli-service-global
 ```
+
+### Gulp
+
+```sh
+npm install --global gulp-cli
+```
+
+
+
 
 ## install woof
 ```
@@ -79,6 +75,12 @@ dep installWoow development
 ## install woow theme
 ```
 dep installWoowTheme development
+```
+
+
+## Starting hot reload
+```sh
+gulp
 ```
 
 ___
