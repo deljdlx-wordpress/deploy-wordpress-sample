@@ -24,12 +24,16 @@ else
     echo "Composer already installed"
 fi
 
+# ========================================================================================
 
-echo "🟢 Global composer install"
+
+echo "🟢 Project composer install"
 composer install
 git clone git@github.com:deljdlx/deploy.git ./vendor/Deljdlx/Deploy
 git clone git@github.com:deljdlx/deploy-wordpress.git ./vendor/Deljdlx/DeployWordpress
 
+# ========================================================================================
+
 
 echo ""
 echo "=============================="
@@ -37,7 +41,7 @@ echo "=============================="
 echo ""
 
 
-echo "🟢 Installing minimal wordpress"
+echo "🟢 Installing wordpress"
 dep scaffold development
 
 echo ""
@@ -45,20 +49,26 @@ echo "=============================="
 echo "=============================="
 echo ""
 
+# ========================================================================================
+
 echo "🟢 Installing woof ; Wordpress Oriented Object Framework"
 dep installWoof development
 
 echo "🟢 Installing woow ; the Woof Workbench"
 dep installWoow development
 
-echo "🟢 Installing  woow theme ; the woow test theme"
+echo "🟢 Plugins activation"
 cd public && wp plugin activate --all && cd ..
+
+echo "🟢 Installing  woow theme ; the woow test theme"
 dep installWoowTheme development
 
 echo ""
 echo "=============================="
 echo "=============================="
 echo ""
+
+# ========================================================================================
 
 
 echo "🟢 Installing js development requirements"
@@ -76,18 +86,21 @@ echo "=============================="
 echo "=============================="
 echo ""
 
+# ========================================================================================
+
 echo "🟢 Checking/Installing vuejs global requirements"
 
 if [ $(which vue) ]; then
-    echo "vue-cli already installed";
+    echo "vuejs requirements already installed";
 else
     echo "🟢 Installing @vue/cli"
     npm install -g @vue/cli
 
-    echo "🟢 Installing  vuejs @vue/cli-service-global"
+    echo "🟢 Installing vuejs @vue/cli-service-global"
     npm install -g @vue/cli-service-global
 fi;
 
+# ========================================================================================
 
 echo ""
 echo "=============================="
@@ -103,5 +116,4 @@ echo "💛 To start front run those commands"
 echo "cd frontend"
 echo "npm run serve"
 
-
-
+# ========================================================================================
