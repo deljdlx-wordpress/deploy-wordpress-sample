@@ -1,3 +1,4 @@
+echo "🟢 Checking Global requirements"
 
 if [ ! -f /usr/local/bin/dep ]; then
     curl -LO https://deployer.org/deployer.phar
@@ -24,47 +25,81 @@ else
 fi
 
 
+echo "🟢 Global composer install"
 composer install
 git clone git@github.com:deljdlx/deploy.git ./vendor/Deljdlx/Deploy
 git clone git@github.com:deljdlx/deploy-wordpress.git ./vendor/Deljdlx/DeployWordpress
 
 
-echo "Install minimal wordpress"
+echo ""
+echo "=============================="
+echo "=============================="
+echo ""
+
+
+echo "🟢 Installing minimal wordpress"
 dep scaffold development
 
+echo ""
+echo "=============================="
+echo "=============================="
+echo ""
 
+echo "🟢 Installing woof ; Wordpress Oriented Object Framework"
 dep installWoof development
+
+echo "🟢 Installing woow ; the Woof Workbench"
 dep installWoow development
+
+echo "🟢 Installing  woow theme ; the woow test theme"
 cd public && wp plugin activate --all && cd ..
 dep installWoowTheme development
 
+echo ""
+echo "=============================="
+echo "=============================="
+echo ""
 
-echo "Install vuejs global requirements"
 
+echo "🟢 Installing js development requirements"
+
+echo "🟢 Installing gulp"
+npm install gulp
+
+echo "🟢 npm install"
+npm install
+
+echo "💛 run gulp for wordpress hot reload"
+
+echo ""
+echo "=============================="
+echo "=============================="
+echo ""
+
+echo "🟢 Checking/Installing vuejs global requirements"
 
 if [ $(which vue) ]; then
     echo "vue-cli already installed";
 else
-    echo "Install @vue/cli"
+    echo "🟢 Installing @vue/cli"
     npm install -g @vue/cli
 
-    echo "Install vuejs @vue/cli-service-global"
+    echo "🟢 Installing  vuejs @vue/cli-service-global"
     npm install -g @vue/cli-service-global
 fi;
 
 
+echo ""
+echo "=============================="
+echo "=============================="
+echo ""
 
-# dep installRequirements development
-npm install gulp
-npm install
 
-# gulp
-
-echo "Install frontend"
+echo "🟢 Installing  frontend"
 git clone git@github.com:deljdlx-wordpress/vvw.git ./frontend
 cd frontend && npm install && cd ..
 
-echo "To start front run those commands"
+echo "💛 To start front run those commands"
 echo "cd frontend"
 echo "npm run serve"
 
