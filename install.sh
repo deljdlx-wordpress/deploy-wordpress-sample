@@ -43,6 +43,8 @@ echo ""
 
 echo "🟢 Installing wordpress"
 dep scaffold development
+echo "🟢 Creating .htaccess file and setting chmod"
+cd public && composer run activate-htaccess && composer run chmod && cd ..
 
 echo ""
 echo "=============================="
