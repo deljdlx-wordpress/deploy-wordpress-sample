@@ -62,6 +62,25 @@ dep installWoow development
 echo "🟢 Plugins activation"
 cd public && wp plugin activate --all && cd ..
 
+
+
+# ========================================================================================
+
+echo "🟢 Checking/Installing vuejs global requirements"
+
+if [ $(which vue) ]; then
+    echo "vuejs requirements already installed";
+else
+    echo "🟢 Installing @vue/cli"
+    npm install -g @vue/cli
+
+    echo "🟢 Installing vuejs @vue/cli-service-global"
+    npm install -g @vue/cli-service-global
+fi;
+
+# ========================================================================================
+
+
 echo "🟢 Installing  woow theme ; the woow test theme"
 dep installWoowTheme development
 
@@ -88,19 +107,7 @@ echo "=============================="
 echo "=============================="
 echo ""
 
-# ========================================================================================
 
-echo "🟢 Checking/Installing vuejs global requirements"
-
-if [ $(which vue) ]; then
-    echo "vuejs requirements already installed";
-else
-    echo "🟢 Installing @vue/cli"
-    npm install -g @vue/cli
-
-    echo "🟢 Installing vuejs @vue/cli-service-global"
-    npm install -g @vue/cli-service-global
-fi;
 
 # ========================================================================================
 
