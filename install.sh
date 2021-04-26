@@ -10,3 +10,9 @@ npm install
 
 # gulp
 
+
+git clone git@github.com:deljdlx-wordpress/vvw.git ./frontend
+cd frontend
+npm install
+
+

@@ -51,7 +51,7 @@ class Development extends Environment
 
             ->set('DB_NAME', 'wp_workbench')
             ->set('DB_USER', 'wordpress')
-            ->set('DB_PASSWORD', 'wordpress')
+            ->set('DB_PASSWORD', 'CHANGE_ME')
             ->set('DB_HOST', 'localhost')
             ->set('DB_TABLE_PREFIX', 'wp_')
 
