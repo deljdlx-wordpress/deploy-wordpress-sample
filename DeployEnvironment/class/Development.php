@@ -40,7 +40,7 @@ class Development extends Environment
 
             ->set('SITE_NAME', 'WP Sample - minimal Wordpress installation with vuejs')
             ->set('BO_USER', 'admin')
-            ->set('BO_PASSWORD', 'CHANGE_ME')
+            ->set('BO_PASSWORD', 'admin')
             ->set('BO_EMAIL', 'admin@mail.com')
             ->set('WORDPRESS_PUBLIC_FOLDER',  $this->get('public_path_name'))
 
