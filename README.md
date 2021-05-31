@@ -42,6 +42,7 @@ sh install.sh
 dep scaffold development
 ```
 
+___
 
 ## Woof Requirements
 
@@ -52,12 +53,6 @@ npm install -g @vue/cli
 npm install -g @vue/cli-service-global
 ```
 
-### Gulp
-
-```sh
-npm install --global gulp-cli
-```
-
 
 
 
@@ -66,6 +61,8 @@ npm install --global gulp-cli
 dep installRequirements development
 dep installWoof development
 ```
+___
+
 
 ## install woow
 ```
@@ -76,9 +73,17 @@ dep installWoow development
 ```
 dep installWoowTheme development
 ```
+___
 
 
 ## Starting hot reload
+
+### Gulp
+
+```sh
+npm install --global gulp-cli
+```
+
 ```sh
 gulp
 ```
