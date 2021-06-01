@@ -2,11 +2,21 @@
 namespace Deployer;
 
 use Deljdlx\Deploy\Environment\Development;
-use Deljdlx\Deploy\Wordpress\WoowRecipe;
+use Deljdlx\Deploy\Environment\Secret\Online;
 
 
-$configuration = new WoowRecipe();
+use Deljdlx\Deploy\Wordpress\WordpressRecipe;
+$configuration = new WordpressRecipe();
+
+
 $configuration->setEnvironment(
     'development',
     new Development('development')
+);
+
+
+
+$configuration->setEnvironment(
+    'online',
+    new Online('online')
 );

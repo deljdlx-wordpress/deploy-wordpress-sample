@@ -39,9 +39,13 @@ Configure file DeploymentEnvironment/class/Development.php
 
 ```sh
 sh install.sh
-dep scaffold development
 ```
 
+## Deploy development
+
+```sh
+dep scaffold development
+```
 ___
 
 ## Woof Requirements

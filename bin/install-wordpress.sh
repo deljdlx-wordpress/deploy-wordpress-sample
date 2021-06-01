@@ -23,8 +23,8 @@ echo "=============================="
 echo ""
 
 
-echo "🟢 Installing wordpress"
-dep scaffold development
+# echo "🟢 Installing wordpress"
+# dep scaffold development
 
 
 if [ ! -f "public/.htaccess" ]; then

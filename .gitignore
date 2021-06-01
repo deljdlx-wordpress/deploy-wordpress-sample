@@ -6,8 +6,13 @@ package-lock.json
 
 gulpfile.js
 
+
+DeployEnvironment/class/Secret
+
+
 # vuejs default folder
 frontend
 
 # wordpress default folder
 public
+www
