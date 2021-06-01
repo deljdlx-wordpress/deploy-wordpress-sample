@@ -15,19 +15,9 @@ git clone git@github.com:deljdlx/deploy.git ./vendor/Deljdlx/Deploy
 git clone git@github.com:deljdlx/deploy-wordpress.git ./vendor/Deljdlx/DeployWordpress
 
 # ========================================================================================
-
-
 echo ""
 echo "=============================="
-echo "=============================="
-echo ""
 
 
-# echo "🟢 Installing wordpress"
-# dep scaffold development
-
-
-if [ ! -f "public/.htaccess" ]; then
-    echo "🟢 Creating .htaccess file and setting chmod"
-    cd public && composer run activate-htaccess && composer run chmod && cd ..
-fi
+echo "🟢 Installing wordpress"
+dep scaffold development
